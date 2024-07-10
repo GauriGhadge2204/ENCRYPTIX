@@ -1,0 +1,18 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+int main() {
+    std::srand(std::time(0));
+
+    int randomNumber = std::rand() % 100 + 1;
+    int guess = 0;
+    
+
+    std::cout << "Welcome to the Number Guessing Game!" << std::endl;
+    std::cout << "I have generated a random number between 1 and 100." << std::endl;
+    std::cout << "Can you guess what it is?\n" << std::endl;
+
+    while (guess != randomNumber) {
+        std::cout << "Enter your guess: ";
+        std::cin >> guess;
